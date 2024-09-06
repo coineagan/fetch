@@ -30,23 +30,21 @@ I also used [zipcodes](https://github.com/davglass/zipcodes) for zip code and ci
 The tool is run with an `npm` script named `geo`. The script accepts zip codes and direct city/state names as strings separated by spaces. For example:
 
 ```
-npm run geo -- "60651"
-npm run geo -- "Portland, OR"
 npm run geo -- "60651" "Portland, OR"
 ```
 
 It has error handling for zip codes and locations in the correct format but which do not exist. For example:
 
 ```
-npm run geo -- "99999"
-npm run geo -- "Fantasy Land, AA"
+npm run geo -- "99999" "Fantasy Land, AA"
 ```
 
 And it also has error handling for incorrectly formatted arguments and empty arguments. For example:
 
 ```
-npm run geo -- "60651333"
-npm run geo -- "Portland but not the Maine one"
+npm run geo -- "60651333" "Portland but not the Maine one"
+```
+```
 npm run geo --
 ```
 
